@@ -1,0 +1,44 @@
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.red {
+  background-color: #dc3545;
+  color: white;
+}
+
+.red:hover {
+  background-color: #c82333;
+}
+
+.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.blue:hover {
+  background-color: #0056b3;
+}
+
+.green {
+  background-color: #28a745;
+  color: white;
+}
+
+.green:hover {
+  background-color: #1e7e34;
+}
+
+.yellow {
+  background-color: #ffc107;
+  color: black;
+}
+
+.yellow:hover {
+  background-color: #e0a800;
+}
