@@ -1,4 +1,22 @@
-<div *ngFor="let post of posts">
-  <h2>{{ post.title }}</h2>
-  <p>{{ post.body }}</p>
+<div class="posts-container">
+  <div class="post-count">Total Posts: {{ posts.length }}</div>
+
+  <div *ngFor="let post of posts; let i = index" class="post-item">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <small>Post #{{ i + 1 }}</small>
+  </div>
+
+  <app-reuseable-button
+    [buttonText]="'Load More Posts'"
+    [buttonColor]="'blue'"
+    (buttonClick)="loadMorePosts()"
+    *ngIf="!loading && hasMorePosts()"
+  ></app-reuseable-button>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+
+  <div *ngIf="!loading && !hasMorePosts() && posts.length > 0" class="no-more-posts">
+    No more posts to load
+  </div>
 </div>
